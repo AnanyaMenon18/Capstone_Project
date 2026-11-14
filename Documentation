@@ -1,0 +1,219 @@
+# CAMPUSBITE
+## Restaurant Ordering & Delivery Platform
+**Project Documentation**
+
+---
+
+## 1. Introduction
+
+CampusBite is a full-stack restaurant ordering and delivery platform developed to simplify the process of ordering food online and managing restaurant operations.
+
+The platform provides a common system for customers, restaurant owners and delivery partners. Customers can explore restaurants, browse food menus, place orders and track their order status. Restaurant owners can manage restaurant details, menu items and incoming orders, while delivery partners can view assigned deliveries and update their delivery progress.
+
+The application integrates frontend development, backend API services and relational database management to provide a centralized food ordering solution.
+
+## 2. Problem Statement
+
+Traditional food ordering and restaurant management processes can involve manual communication, difficulty managing orders and limited visibility into delivery progress.
+
+Customers may find it difficult to track their orders, while restaurant owners need an organized way to manage menus and incoming orders. Delivery partners also require access to their assigned orders and delivery information.
+
+CampusBite aims to address these challenges by providing a centralized digital platform that connects all three user roles and simplifies the overall ordering and delivery process.
+
+## 3. Project Objectives
+
+The main objectives of CampusBite are:
+
+- To develop a user-friendly online restaurant ordering platform.
+- To allow customers to browse restaurants and explore available food items.
+- To provide customers with the ability to place orders and monitor order progress.
+- To enable restaurant owners to manage menus, restaurant information and incoming orders.
+- To allow delivery partners to access assigned deliveries and update their status.
+- To maintain application data using a structured relational database.
+- To implement secure user authentication and role-based access.
+- To develop and run the application using Docker containerization.
+
+## 4. Technology Stack
+
+The project uses the following technologies:
+
+| Component | Technology | Purpose |
+|---|---|---|
+| Frontend | React.js | Developing the user interface |
+| Styling | CSS | Designing and styling application pages |
+| Backend | Python, FastAPI | Application logic and REST APIs |
+| Data Validation | Pydantic | Validating request and response data |
+| ORM | SQLAlchemy | Database interaction |
+| Database | Microsoft SQL Server | Storing application data |
+| Authentication | JWT | User authentication and authorization |
+| HTTP Client | Axios | Connecting frontend with backend APIs |
+| Containerization | Docker | Packaging application services |
+| Orchestration | Docker Compose | Running frontend and backend services together |
+
+## 5. System Architecture
+
+CampusBite follows a three-layer architecture consisting of the frontend, backend and database.
+
+### 5.1 Frontend Layer
+
+The frontend is developed using React.js and CSS. It provides the interface through which customers, restaurant owners and delivery partners interact with the application.
+
+The frontend includes registration and login pages, dashboards, restaurant listings, menu management, order management and profile-related interfaces.
+
+Axios is used to send HTTP requests to the backend APIs and retrieve application data.
+
+### 5.2 Backend Layer
+
+The backend is developed using Python and FastAPI.
+
+It handles application logic, API requests, user authentication, order operations, restaurant management and communication with the database.
+
+Pydantic is used for data validation, while SQLAlchemy is used to perform database operations.
+
+JWT authentication is used to support authenticated access to protected application features.
+
+### 5.3 Database Layer
+
+Microsoft SQL Server is used as the relational database.
+
+It stores information related to users, restaurants, menu items, orders, payments, reviews and other application activities.
+
+The backend communicates with SQL Server through SQLAlchemy.
+
+## 6. Functional Modules
+
+CampusBite consists of three main user modules.
+
+### 6.1 Customer Module
+
+The customer module allows users to access restaurant and food ordering services.
+
+Key functionalities include:
+
+- User registration and login.
+- Browsing available restaurants.
+- Searching and filtering restaurants.
+- Viewing restaurant menus.
+- Adding food items and placing orders.
+- Viewing order history and tracking order status.
+- Cancelling eligible orders.
+- Submitting restaurant reviews.
+- Raising return requests.
+- Managing personal profile information.
+
+### 6.2 Restaurant Owner Module
+
+The restaurant owner module allows restaurant owners to manage their restaurant operations.
+
+Key functionalities include:
+
+- Managing restaurant information.
+- Creating and managing menu items.
+- Editing food item details and prices.
+- Updating menu item availability.
+- Viewing incoming customer orders.
+- Updating order statuses.
+- Viewing and handling return requests.
+- Monitoring restaurant-related activities.
+
+### 6.3 Delivery Partner Module
+
+The delivery partner module supports delivery-related operations.
+
+Key functionalities include:
+
+- Viewing assigned deliveries.
+- Accessing relevant order information.
+- Updating delivery progress.
+- Managing delivery statuses.
+- Marking deliveries as completed.
+
+## 7. Database Design
+
+CampusBite uses Microsoft SQL Server and consists of nine main database tables.
+
+| Table | Description |
+|---|---|
+| Users | Stores customer, restaurant owner and delivery partner information. |
+| Restaurants | Stores restaurant details and information. |
+| Menu_Items | Stores food item details, prices and availability. |
+| Orders | Maintains customer order information and order statuses. |
+| Order_Items | Stores individual food items associated with each order. |
+| Reviews | Maintains customer feedback and ratings. |
+| Payment_Ledger | Maintains payment-related records. |
+| Return_Requests | Stores customer return requests and their statuses. |
+| Reminders | Stores order-related reminder information. |
+
+The database uses primary keys and foreign key relationships to maintain connections between related records and support data consistency.
+
+## 8. Implementation and Development
+
+The development of CampusBite was carried out in multiple phases.
+
+**Phase 1 – Frontend Development**
+
+The user interface was developed using React.js and CSS. Separate dashboards and functionalities were created for customers, restaurant owners and delivery partners.
+
+**Phase 2 – Database Development**
+
+The CampusBite database was created using Microsoft SQL Server. Nine relational tables were designed to store the application's information.
+
+**Phase 3 – Backend Development**
+
+FastAPI was used to develop backend endpoints for user authentication, restaurant management, menu operations, orders, reviews and return requests.
+
+SQLAlchemy models and Pydantic schemas were used for database interaction and request validation.
+
+**Phase 4 – Frontend and Backend Integration**
+
+Axios was used to connect the React frontend with the FastAPI backend. API requests were implemented to retrieve and update application data.
+
+**Phase 5 – Containerization**
+
+Docker and Docker Compose were used to package and run the frontend and backend services.
+
+## 9. Testing and Validation
+
+The application was tested to verify the functionality of its main modules.
+
+The following areas were covered during testing:
+
+- User registration and login.
+- Restaurant creation and restaurant listing.
+- Menu item creation, editing and availability updates.
+- Customer order placement.
+- Order status updates.
+- Delivery status progression.
+- Customer reviews and ratings.
+- Return request submission and management.
+- Profile information management.
+- Frontend and backend API connectivity.
+- Database connectivity and data retrieval.
+
+Testing helped identify and resolve issues related to API connectivity, frontend integration, database operations and application functionality.
+
+## 10. Conclusion
+
+CampusBite successfully demonstrates the development of a full-stack restaurant ordering and delivery platform.
+
+The project brings together React.js, Python, FastAPI, Microsoft SQL Server and Docker to create an integrated application supporting customers, restaurant owners and delivery partners.
+
+Through this project, practical knowledge was gained in frontend development, REST API development, database design, authentication, application integration and containerization.
+
+CampusBite provides a foundation that can be further enhanced with additional features and cloud deployment.
+
+## 11. Future Scope
+
+The platform can be enhanced in the future through:
+
+- Integration of online payment gateways.
+- Real-time GPS-based delivery tracking.
+- Email and SMS order notifications.
+- Advanced food recommendation systems.
+- Improved analytics dashboards for restaurant owners.
+- Cloud deployment for improved accessibility and scalability.
+
+---
+
+**Project Name:** CampusBite – Restaurant Ordering & Delivery Platform  
+**Project Type:** Full-Stack Capstone Project
