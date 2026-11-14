@@ -1,23 +1,42 @@
 
+# Secrets
 .env
 .env.*
-!.env.example
+**/.env
+**/.env.*
 
+# Python
 venv/
 .venv/
 __pycache__/
 *.pyc
 
+# Node
 node_modules/
 dist/
 
+# Local environments
+env/
+nodejs/
+
+# IDE
+.vs/
 .vscode/
 .idea/
 
+# Logs and database files
 *.log
 *.bak
 *.mdf
 *.ldf
-# Local environments and dependencies
-env/
-nodejs/
+# API keys and sensitive files
+api key.txt
+*api*key*
+*.key
+
+# Installers
+*.msi
+*.exe
+
+# SQL files - temporarily exclude until reviewed
+/*.sql
